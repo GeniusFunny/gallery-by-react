@@ -1,18 +1,15 @@
 import React, { Component } from 'react';
 import './App.css';
+import Nav from './components/navbar';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import AppBar from 'material-ui/AppBar';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <AppBar
-          title="Title"
-          iconClassNameRight="mudiocs-icon-navigation-expand-more"
-        />
-      </div>
-    );
+      <MuiThemeProvider>
+        <Nav />
+      </MuiThemeProvider>
+    )
   }
 }
 
