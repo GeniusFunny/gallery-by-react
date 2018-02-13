@@ -1,0 +1,16 @@
+.root {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  flex-grow: 0; }
+
+.grid-list {
+  width: 300;
+  height: 450;
+  overflow-y: auto; }
+
+.grid-cell {
+  flex: 1; }
+
+/*# sourceMappingURL=main.css.map */

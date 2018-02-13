@@ -1,13 +1,10 @@
 import React, { Component } from 'react';
 import '../App.css';
+import '../stylesheets/Nav.css'
 import AppBar from 'material-ui/AppBar';
 import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
 //import Parent from '../tools/eventProxy'
-
-import injectTapEventPlugin from 'react-tap-event-plugin';
-
-injectTapEventPlugin();
 
 
 class Nav extends Component {
@@ -89,11 +86,28 @@ class NavDrawer extends Component {
           open={this.props.msg}
           onRequestChange={this.handleToggle}
       >
-        <MenuItem onClick={this.handleClose}> Menu Item1</MenuItem>
-        <MenuItem onClick={this.handleClose}> Menu Item2</MenuItem>
+        <MenuItems />
       </Drawer>
     )
   }
 }
-
+class MenuItems extends Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    return (
+      <ul className='normal-list'>
+        <MenuItem>首页</MenuItem>
+        <MenuItem>Web研发部</MenuItem>
+        <MenuItem>移动开发部</MenuItem>
+        <MenuItem>视觉设计部</MenuItem>
+        <MenuItem>运维安全部</MenuItem>
+        <MenuItem>产品运营部</MenuItem>
+        <MenuItem>关于CTG</MenuItem>
+        <MenuItem>联系我们</MenuItem>
+      </ul>
+    )
+  }
+}
 export default Nav;
