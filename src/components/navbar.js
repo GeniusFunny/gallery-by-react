@@ -124,23 +124,20 @@ class NavDrawer extends Component {
 }
 
 class MenuItems extends Component {
-  constructor(props) {
-    super(props);
-  }
   handleMenuItemClick() {
     eventProxy.trigger('close', false);
   }
   render() {
     return (
       <ul className='normal-list'>
-        <MenuItem onClick={this.handleMenuItemClick}>首页</MenuItem>
+        <MenuItem onClick={this.handleMenuItemClick} key={0}>首页</MenuItem>
         {BranchItemDatas.map((item) => {
           return (
-            <MenuItem onClick={this.handleMenuItemClick} key={this.key}>{item.name}</MenuItem>
+            <MenuItem onClick={this.handleMenuItemClick} key={item.key}>{item.name}</MenuItem>
           )
         })}
-        <MenuItem onClick={this.handleMenuItemClick}>关于CTG</MenuItem>
-        <MenuItem onClick={this.handleMenuItemClick}>联系我们</MenuItem>
+        <MenuItem onClick={this.handleMenuItemClick} key={6}>关于CTG</MenuItem>
+        <MenuItem onClick={this.handleMenuItemClick} key={7}>联系我们</MenuItem>
       </ul>
     )
   }
