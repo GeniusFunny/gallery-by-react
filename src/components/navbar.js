@@ -5,6 +5,8 @@ import AppBar from 'material-ui/AppBar';
 import Drawer from 'material-ui/Drawer';
 import eventProxy from '../tools/eventProxy';
 import MenuItem from 'material-ui/MenuItem';
+import IconButton from 'material-ui/IconButton';
+import FontIcon from 'material-ui/FontIcon';
 
 const BranchItemDatas = [
   {
@@ -67,7 +69,6 @@ class NavBar extends Component {
     return (
       <AppBar
         title="CTG Club"
-        iconClassNameRight="mudiocs-icon-navigation-expand-more"
         onLeftIconButtonClick={this.handleMenuClick}
       />
     );
@@ -134,7 +135,7 @@ class MenuItems extends Component {
         {BranchItemDatas.map((item) => {
           return (
             <MenuItem onClick={this.handleMenuItemClick} key={item.key}>{item.name}</MenuItem>
-          )
+          );
         })}
         <MenuItem onClick={this.handleMenuItemClick} key={6}>关于CTG</MenuItem>
         <MenuItem onClick={this.handleMenuItemClick} key={7}>联系我们</MenuItem>

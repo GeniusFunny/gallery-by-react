@@ -22,13 +22,13 @@ class Main extends Component {
           <GridTile className='grid-cell'>
             <Item />
           </GridTile>
-          <GridTile>
+          <GridTile className='grid-cell'>
             <Item />
           </GridTile>
-          <GridTile>
+          <GridTile className='grid-cell'>
             <Item />
           </GridTile>
-          <GridTile>
+          <GridTile className='grid-cell'>
             <Item />
           </GridTile>
   

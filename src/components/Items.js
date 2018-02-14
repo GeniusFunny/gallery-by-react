@@ -3,6 +3,8 @@ import { CardHeader, CardMedia, CardTitle, CardText, CardActions, Card } from 'm
 import FlutButton from 'material-ui/FlatButton';
 import JS from './JavaScript.png';
 import '../stylesheets/Items.css';
+import { GridList, GridTile } from 'material-ui/GridList';
+
 
 class Item extends Component {
 
@@ -14,17 +16,11 @@ class Item extends Component {
     return (
       <Card>
 
-        <CardMedia
-          overlay={<CardTitle title="Overlay title" subtitle="Overlay subtitle" />}
-        >
+        <CardMedia>
           <img src={JS} alt="JavaScript" />
         </CardMedia>
-
-        <CardText></CardText>
-
-
         <CardActions>
-          <FlutButton label="报名" />
+          <FlutButton label="报名" style={{}}/>
         </CardActions>
       </Card>
     )
@@ -38,12 +34,19 @@ class Items extends Component {
 
   render() {
     return (
-      <section>
-        <Item />
-        <Item />
-        <Item />
-      </section>
+      <div className='root'>
+        <GridList
+          cols={3}
+          rows={3}
+          padding={8}
+          className='gridList'
+        >
+            <Item />
+            <Item />
+            <Item />
+        </GridList>
+      </div>
     )
   }
 }
-export default Item;
+export default Items;
