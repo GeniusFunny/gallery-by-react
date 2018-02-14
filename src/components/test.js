@@ -6,44 +6,6 @@ import Drawer from 'material-ui/Drawer';
 import eventProxy from '../tools/eventProxy';
 import MenuItem from 'material-ui/MenuItem';
 
-const BranchItemDatas = [
-  {
-    name: 'Web研发部',
-    imgUrl: null,
-    imgTitle: null,
-    intro: null,
-    key:1
-  },
-  {
-    name: '移动开发部',
-    imgUrl: null,
-    imgTitle: null,
-    intro: null,
-    key: 2
-  },
-  {
-    name: '视觉设计部',
-    imgUrl: null,
-    imgTitle: null,
-    intro: null,
-    key: 3
-  },
-  {
-    name: '产品运营部',
-    imgUrl: null,
-    imgTitle: null,
-    intro: null,
-    key: 4
-  },
-  {
-    name: '运维安全部',
-    imgUrl: null,
-    imgTitle: null,
-    intro: null,
-    key: 5
-  }
-];
-
 class Nav extends Component {
   render() {
     return (
@@ -56,19 +18,13 @@ class Nav extends Component {
 }
 
 class NavBar extends Component {
-  constructor(props) {
-    super(props);
-    this.handleMenuClick = this.handleMenuClick.bind(this);
-  }
-  handleMenuClick() {
-    eventProxy.trigger('open', true);
-  }
+  
   render() {
     return (
       <AppBar
         title="CTG Club"
         iconClassNameRight="mudiocs-icon-navigation-expand-more"
-        onLeftIconButtonClick={this.handleMenuClick}
+        onLeftIconButtonClick={eventProxy.trigger('open', true)}
       />
     );
   }
@@ -95,14 +51,15 @@ class NavDrawer extends Component {
       open: false
     })
   }
-
-  componentDidMount() {
-    eventProxy.on('open', () => {
+  
+  componentDidMount(){
+    eventProxy.on('open',() => {
       this.setState({
         open: true
       });
     });
-    eventProxy.on('close', () => {
+    //When click MenuItem, close Drawer.
+    eventProxy.on('close',() => {
       this.setState({
         open: false
       });
@@ -117,7 +74,7 @@ class NavDrawer extends Component {
         open={this.state.open}
         onRequestChange={this.handleToggle}
       >
-        <MenuItems />
+      <MenuItems />
       </Drawer>
     )
   }
@@ -128,7 +85,7 @@ class MenuItems extends Component {
     super(props);
   }
   handleMenuItemClick() {
-    eventProxy.trigger('close', false);
+    eventProxy.trigger('close',false);
   }
   render() {
     return (
