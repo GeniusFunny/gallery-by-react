@@ -136,7 +136,7 @@ class MenuItems extends Component {
         <MenuItem onClick={this.handleMenuItemClick}>首页</MenuItem>
         {BranchItemDatas.map((item) => {
           return (
-            <MenuItem onClick={this.handleMenuItemClick}>{item.name}</MenuItem>
+            <MenuItem onClick={this.handleMenuItemClick} key={this.key}>{item.name}</MenuItem>
           )
         })}
         <MenuItem onClick={this.handleMenuItemClick}>关于CTG</MenuItem>
