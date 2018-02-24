@@ -1,0 +1,16 @@
+.root {
+  display: flex;
+  flex-wrap: wrap;
+}
+.gridList {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+.item {
+  width: auto;
+  height: 1200px;
+}
+titleStyle {
+  color: rgb(0, 188, 212);
+}

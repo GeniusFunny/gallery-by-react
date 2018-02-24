@@ -1,6 +1,25 @@
 .Item-img {
-  width: 200px;
-  height: auto;
- }
+  display: block;
+  width: 100px;
+  height: auto; }
+
+.item {
+  justify-self: center;
+  align-self: center; }
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 30px;
+  margin: 1vw; }
+
+@media screen and (max-width: 1024px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr; } }
+@media screen and (max-width: 480px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr; } }
 
 /*# sourceMappingURL=Items.css.map */

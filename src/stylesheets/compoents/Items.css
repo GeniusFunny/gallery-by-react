@@ -1,0 +1,15 @@
+.Item-img {
+  display: block;
+  width: 200px;
+  height: auto;
+  grid-gap: 5px; }
+
+.item {
+  width: 400px;
+  height: 300px; }
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; }
+
+/*# sourceMappingURL=Items.css.map */
