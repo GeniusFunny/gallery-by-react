@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import '../App.css';
 import '../stylesheets/Nav.css'
 import AppBar from 'material-ui/AppBar';
 import Drawer from 'material-ui/Drawer';
